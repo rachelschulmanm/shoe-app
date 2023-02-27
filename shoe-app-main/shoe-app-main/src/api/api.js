@@ -1,9 +1,10 @@
 import axios from "axios";
+import React, { useEffect } from "react";
 
 export const getAllShoes = async () => {
   try {
     const res = await axios.get(
-      "https://63f8b1d01dc21d5465c4e1f2.mockapi.io/api/shoes/"
+      "https://63fc6c4e8ef914c555971d53.mockapi.io/api/shoes/"
     );
     return res.data;
   } catch (error) {
@@ -14,7 +15,7 @@ export const getAllShoes = async () => {
 export const getShoeById = async (id) => {
   try {
     const res = await axios.get(
-      `https://63f8b1d01dc21d5465c4e1f2.mockapi.io/api/shoes/` + id
+      `https://63fc6c4e8ef914c555971d53.mockapi.io/api/shoes/` + id
     );
     console.log(res);
     return res.data;
@@ -22,22 +23,22 @@ export const getShoeById = async (id) => {
     console.log(error);
   }
 };
-export const addShoe = async ( body) => {
-    try {
-      const res = await axios.post(
-        `https://63f8b1d01dc21d5465c4e1f2.mockapi.io/api/shoes/`,
-        body
-      );
-      console.log(res);
-      return res.data;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+export const addShoe = async (body) => {
+  try {
+    const res = await axios.post(
+      `https://63fc6c4e8ef914c555971d53.mockapi.io/api/shoes/`,
+      body
+    );
+    console.log(res);
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 export const updateShoeById = async (id, body) => {
   try {
     const res = await axios.put(
-      `https://63f8b1d01dc21d5465c4e1f2.mockapi.io/api/shoes/${id}`,
+      `https://63fc6c4e8ef914c555971d53.mockapi.io/api/shoes/${id}`,
       body
     );
     console.log(res);
@@ -47,13 +48,13 @@ export const updateShoeById = async (id, body) => {
   }
 };
 export const deleteShoeById = async (id) => {
-    try {
-      const res = await axios.delete(
-        `https://63f8b1d01dc21d5465c4e1f2.mockapi.io/api/shoes/${id}`
-      );
-      console.log(res);
-      return res.data;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  try {
+    const res = await axios.delete(
+      `https://63fc6c4e8ef914c555971d53.mockapi.io/shoes/${id}`
+    );
+    console.log(res);
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
